@@ -11,7 +11,6 @@ function App() {
 
   useEffect(() => {
     const storedTasks = localStorage.getItem('tasks');
-    console.log('Retrieved tasks:', storedTasks);
     if (storedTasks) {
       setTasks(JSON.parse(storedTasks));
     }
@@ -19,7 +18,6 @@ function App() {
   
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
-    console.log('Stored tasks:', tasks);
   }, [tasks]);
 
   const addTask = () => {
